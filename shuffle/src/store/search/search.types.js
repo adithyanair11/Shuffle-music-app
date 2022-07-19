@@ -1,0 +1,3 @@
+export const SEARCH_ACTION_TYPES = {
+    SET_SEARCH_ITEMS: 'SET_SEARCH_ITEMS' 
+}

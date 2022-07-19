@@ -11,6 +11,8 @@ import { HomePage } from "./routes/home/home.component";
 import { DiscoverPage } from './routes/discover/discover.component';
 import {Footer} from './components/footer/footer.component';
 import { Header } from './components/header/header.component';
+import { SearchPage } from './routes/search/search.component';
+import Search from '@mui/icons-material/Search';
 const spotifyApi = new SpotifyWebApi({
     clientId: '3af44969d17340bb8bcd37790457c1f4'
 }); 
@@ -46,6 +48,7 @@ export const DashBoard = ({code}) => {
                     <Routes>
                         <Route path="/*" element={<HomePage />}/>
                         <Route path="/discover/*" element={<DiscoverPage />} />
+                        <Route path="/search" element={<SearchPage/>} />
                     </Routes>
                 </div>
             </div>

@@ -1,0 +1,15 @@
+.search{
+    height:50px;
+    margin-top:1em;
+    max-width:400px;
+}
+
+.search-box{
+    width: 100%;
+    height:50px;
+    padding: 0 1em;
+    font-size: 1rem;
+    outline:none;
+    border:1px solid black;
+    border-radius: 30px;
+}
