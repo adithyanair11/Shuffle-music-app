@@ -1,0 +1,10 @@
+.artist-banner{
+    width:100%;
+    height: 300px;
+}
+
+.artist-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em 0;
+}

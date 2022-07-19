@@ -1,0 +1,17 @@
+.dash-board{
+    color: #fff;
+    position: relative;
+}
+
+.dash-board-body{
+    display: flex;
+}
+
+.body{
+    height: 100vh;
+    flex: 0.8;
+    background-color: rgb(91,87,115);
+    background-image: linear-gradient(rgb(91,87,115), rgba(0,0,0,1));
+    padding: 30px;
+    overflow-y: overlay;
+}

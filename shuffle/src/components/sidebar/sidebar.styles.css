@@ -1,0 +1,43 @@
+.sidebar{
+    height: 100vh;
+    flex: 0.2;
+    background-color: #040404;
+    min-width: 230px;
+    padding: 0 10px;
+    overflow-y: overlay;
+}
+
+
+.sidebar-logo-container{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 1.6em;
+}
+.sidebar-logo{
+    height: 60px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.logo-name{
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.sidebar-title{
+    margin-left:10px;
+    padding:5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 1em;
+}
+
+.sidebar > hr{
+    border:1px solid #282828;
+    width:90%;
+    margin: 5px auto 10px auto;
+}
