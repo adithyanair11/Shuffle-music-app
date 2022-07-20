@@ -8,9 +8,9 @@ export const DiscoverPage = () => {
         <>
             <Routes>
                 <Route index element={<DiscoverPreview />}/>
-                <Route path="/album/:id" element={<AlbumPage />} />
-                <Route path="/playlist/:id" element={<PlayListPage />} />
-                <Route path="/artist/:id" element={<ArtistPage />}/>
+                <Route path="album/:id" element={<AlbumPage />} />
+                <Route path="playlist/:id" element={<PlayListPage />} />
+                <Route path="artist/:id" element={<ArtistPage />}/>
             </Routes>
         </>
     )

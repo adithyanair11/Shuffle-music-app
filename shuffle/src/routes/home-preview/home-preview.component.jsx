@@ -33,7 +33,7 @@ export const HomePreview = () => {
     },[token]);
     return(
         <div className='home'>
-            <CategoriesPreview array={topArtists} categoryTitle="Your Top Artists"/>
+            <CategoriesPreview type="artist" array={topArtists} categoryTitle="Your Top Artists"/>
             <div className='songs'>
                 <div className='songs-container'>
                     <h1>Your Top Tracks</h1>

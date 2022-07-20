@@ -1,10 +1,10 @@
 import './card.styles.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Card = ({data,id,type}) => {
+    const navigate = useNavigate();
     return(
-        <Link to={`${type}/${id}`} className="link link-card">
-        <div className='card' style={{
+        <div onClick={() => navigate(`${type}/${id}`)} className='card' style={{
             backgroundImage: `url(${data?.images[0].url})`,
             backgroundPostion: "center",
             backgroundRepeat: "no-repeat",
@@ -13,6 +13,5 @@ export const Card = ({data,id,type}) => {
             <h4 className='name'>{data?.name}</h4>
             <div className="overlay"/>
         </div>
-        </Link>
     )
 }

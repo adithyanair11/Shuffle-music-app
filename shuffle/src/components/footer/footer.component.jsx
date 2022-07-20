@@ -2,7 +2,7 @@ import './footer.styles.css';
 import {useSelector} from 'react-redux';
 import { selectAccessToken } from '../../store/user/user.selector';
 import { selectSearchTrack } from '../../store/search/search.selector';
-import SpotifyWebPlayer from 'react-spotify-web-playback'
+import SpotifyPlayer from 'react-spotify-web-playback'
 import { useEffect,useState } from 'react';
 export const Footer = () => {
     const token = useSelector(selectAccessToken)
@@ -15,25 +15,30 @@ export const Footer = () => {
     },[track.uri,token])
     return(
         <div className='footer'>
-            <SpotifyWebPlayer 
-            token={token}
-            callback={state => {
-                if(!state.isPlaying){
-                    setPlay(false);
-                }
-            }}
-            play={play}
-            uris={track.uri ? [track.uri]: []}
-            styles={{
-                activeColor: '#fff',
-                bgColor: '#333',
-                color: '#fff',
-                loaderColor: '#fff',
-                sliderColor: '#1cb954',
-                trackArtistColor: '#ccc',
-                trackNameColor: '#fff',
-              }}
-            />
+           {
+            token ?
+            ( <SpotifyPlayer 
+                token={token}
+                callback={state => {
+                    if(!state.isPlaying){
+                        setPlay(false);
+                    }
+                }}
+                play={play}
+                uris={track.uri ? [track.uri]: []}
+                styles={{
+                    activeColor: '#fff',
+                    bgColor: '#333',
+                    color: '#fff',
+                    loaderColor: '#fff',
+                    sliderColor: '#1cb954',
+                    trackArtistColor: '#ccc',
+                    trackNameColor: '#fff',
+                  }}
+                />)
+                :
+                null
+           }
         </div>
     )
 }
