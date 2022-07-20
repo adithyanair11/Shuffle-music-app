@@ -12,7 +12,9 @@ const scopes = [
     "user-top-read",
     "user-modify-playback-state",
     "user-library-read",
-    "user-follow-read"
+    "user-follow-read",
+    "user-read-email",
+    "user-read-private"
 ];
 
 

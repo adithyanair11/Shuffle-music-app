@@ -1,0 +1,3 @@
+export const PLAYER_ACTION_TYPES = {
+    SET_PLAYING: 'SET_PLAYING' 
+}
