@@ -9,6 +9,19 @@
     width: max-content;
     height: 160px;
     display: flex;
-    gap: 0 0.6em ;
+    gap: 0 0.5em ;
     margin-bottom: 1em;
+    transition: all 1s ease;
+}
+
+.category-header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow{
+    font-size: 5px;
+    cursor: pointer;
 }

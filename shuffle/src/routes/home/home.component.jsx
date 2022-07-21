@@ -8,7 +8,7 @@ export const HomePage = () => {
             <Routes>
                 <Route index element={<HomePreview />} />
                 <Route path="playlist/:id" element={<PlayListPage />}/>
-                <Route path="artist/:id" element={<ArtistPage />}/>
+                <Route path="artist/:id/*" element={<ArtistPage />}/>
             </Routes>
         </>
     )

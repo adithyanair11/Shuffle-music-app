@@ -29,13 +29,13 @@ export const SideBar = () => {
                 <img className="sidebar-logo" src="https://webstockreview.net/images/color-clipart-headphone-8.png" alt="logo"/>
                 <span className='logo-name'>shuffle</span>
             </div>
-            <SideBarOption link="search" title="Search" Icon={SearchIcon}/>
-            <SideBarOption link="/" title="Home" Icon={HomeIcon}/>
-            <SideBarOption link="discover" title="Discover" Icon={LibraryMusicIcon}/>
+            <SideBarOption link="search" name="Search" Icon={SearchIcon}/>
+            <SideBarOption link="/" name="Home" Icon={HomeIcon}/>
+            <SideBarOption link="discover" name="Discover" Icon={LibraryMusicIcon}/>
             <strong className='sidebar-title'>PLAYLISTS</strong>
             <hr />
             {
-                userPlaylists?.map(playlist => <SideBarOption key={playlist.id} id={playlist.id} title={playlist.name}/>)
+                userPlaylists?.map(playlist => <SideBarOption key={playlist.id} id={playlist.id} name={playlist.name}/>)
             }
         </div>
     )

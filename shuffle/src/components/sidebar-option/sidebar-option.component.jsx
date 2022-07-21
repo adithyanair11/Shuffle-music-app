@@ -1,7 +1,6 @@
 import './sidebar-option.styles.css';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-export const SideBarOption = ({title,Icon,link,id}) => {
+export const SideBarOption = ({name,Icon,link,id}) => {
     const navigate = useNavigate();
     return(
         <div className='sidebar-option'>
@@ -10,11 +9,11 @@ export const SideBarOption = ({title,Icon,link,id}) => {
             (
                 <div onClick={() => navigate(link)} className='option-container'>
                     <Icon className='option-icon'/>
-                    <h4>{title}</h4>
+                    <h4>{name}</h4>
                 </div>    
             )
             :
-            <p onClick={() => navigate(`/playlist/${id}`)}>{title}</p>
+            <p onClick={() => navigate(`playlist/${id}`)}>{name}</p>
         }
         </div>
     )
