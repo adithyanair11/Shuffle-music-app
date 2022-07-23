@@ -1,5 +1,6 @@
 .discover-page{
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1em 0;
+    gap: 0.6em 0;
 }

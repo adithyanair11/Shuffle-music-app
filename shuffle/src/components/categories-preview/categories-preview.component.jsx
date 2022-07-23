@@ -8,7 +8,7 @@ export const CategoriesPreview = ({array,categoryTitle,type}) => {
     const [slideNumber,setSlideNumber] = useState(0);
     const handleClick = (direction) => {
         let distance = itemRef.current.getBoundingClientRect().x - 260;
-        if(direction === 'left' && slideNumber > 1){
+        if(direction === 'left' && slideNumber >= 1){
             setSlideNumber(slideNumber-1);
             itemRef.current.style.
             transform = `translateX(${168 + distance}px)`;

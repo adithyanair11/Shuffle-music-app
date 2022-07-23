@@ -28,12 +28,13 @@ export const Footer = () => {
                 uris={track.uri ? [track.uri]: []}
                 styles={{
                     activeColor: '#fff',
-                    bgColor: '#333',
+                    bgColor: '#282828',
                     color: '#fff',
                     loaderColor: '#fff',
                     sliderColor: '#1cb954',
                     trackArtistColor: '#ccc',
                     trackNameColor: '#fff',
+                    height: 70
                   }}
                 />)
                 :

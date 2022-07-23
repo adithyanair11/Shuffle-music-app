@@ -5,12 +5,13 @@
     padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     overflow: hidden;
 }
 
 .overlay{
     position:absolute;
+    overflow: hidden;
     top:0;
     left:0;
     right:0;
@@ -27,4 +28,10 @@
 
 .link-card{
     color: #fff;
+}
+
+@media(max-width: 768px){
+    .card{
+        justify-content: center;
+    }
 }

@@ -9,7 +9,7 @@ export const Card = ({data,id,type}) => {
             backgroundImage: `url(${data?.images[0].url})`,
             backgroundPostion: "center",
             backgroundRepeat: "no-repeat",
-            backgroundSize: "contain"
+            backgroundSize: "cover"
         }}>
             <h4 className='name'>{name}</h4>
             <div className="overlay"/>

@@ -3,19 +3,7 @@
     width: 100%;
 }
 
-.artists{
-    margin-top:1em;
-    width: 100%;
-    height: 190px;
-    display: flex;
-    flex-direction: column;
-}
-.artists-container{
-    width: max-content;
-    height: 160px;
-    display: flex;
-    gap: 0 0.6em ;
-}
+
 .songs{
     margin-top:3em;
 }

@@ -3,9 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setSearchTrack } from '../../store/search/search.action';
 export const Song = ({track,image}) => {
     const dispatch = useDispatch();
-    const truncate = (string,n) => {
-        return string?.length > n ? string.substr(0,n-1) + '...' : string;
-    }
+    
     const getTrack = () => {
         dispatch(setSearchTrack(track))
     }
@@ -21,11 +19,11 @@ export const Song = ({track,image}) => {
                 <h5>{track.name}</h5>
                 <p>
                     {
-                        truncate(track?.artists?.
-                            map((artist) => artist?.name).join(", "),25)
+                        track?.artists?.
+                            map((artist) => artist?.name).join(", ")
                     }
-                      {image ? null : track?.album?.name}
                 </p>
+                <p>{image ? null : track?.album?.name}</p>
             </div>
         </div>
     )

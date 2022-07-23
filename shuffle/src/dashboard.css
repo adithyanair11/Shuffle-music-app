@@ -1,6 +1,7 @@
 .dash-board{
     color: #fff;
     position: relative;
+    height: 100vh;
 }
 
 .dash-board-body{
@@ -10,9 +11,24 @@
 .body{
     height: 100vh;
     flex: 0.8;
-    background-color: rgb(91,87,115);
-    background-image: linear-gradient(rgb(91,87,115), rgba(0,0,0,1));
+    background-color: #d81e5b;
+    background-image: linear-gradient(#d81e5b, rgba(0,0,0,1));
     padding: 30px;
     overflow-y: overlay;
     margin-bottom: 2em;
+}
+
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+@media (max-width:768px){
+    .dash-board-body{
+        flex-direction: column;
+    }
+    .body{
+        flex: 1;
+    }
 }

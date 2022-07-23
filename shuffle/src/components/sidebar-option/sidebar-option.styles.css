@@ -1,7 +1,7 @@
 .sidebar-option{
     color: grey;
     font-weight: bold;
-    height: 40px;
+    height: 50px;
     cursor: pointer;
     transition: 200ms color ease-in;
     margin-left: 1em;
@@ -18,16 +18,29 @@
 }
 
 .option-icon {
-    font-size: 4px;
+    font-size: 25px !important;
 }
 
-.sidebar-option p{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 14px;
+.sidebar-option h4{
+    font-size: 18px;
 }
 
 .link{
     text-decoration: none;
     color:grey;
+}
+
+@media (max-width:768px){
+    .sidebar-option{
+        height: 25px;
+    }
+    .sidebar-option h4{
+        font-size: 14px;
+    }
+    .option-container{
+        gap: 0 0.1em;
+    }
+    .option-icon{
+        font-size: 18px !important;
+    }
 }

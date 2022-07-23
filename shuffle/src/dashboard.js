@@ -12,7 +12,6 @@ import { DiscoverPage } from './routes/discover/discover.component';
 import {Footer} from './components/footer/footer.component';
 import { Header } from './components/header/header.component';
 import { SearchPage } from './routes/search/search.component';
-import Search from '@mui/icons-material/Search';
 const spotifyApi = new SpotifyWebApi({
     clientId: '3af44969d17340bb8bcd37790457c1f4'
 }); 
@@ -21,7 +20,7 @@ export const DashBoard = ({code}) => {
     const token = useSelector(selectAccessToken);
     const dispatch = useDispatch();
     const currentUser = useSelector(selectCurrentUser);
-
+    
     useEffect(() => {
         if(!accessToken) return
 
@@ -32,23 +31,24 @@ export const DashBoard = ({code}) => {
         .then(data => dispatch(setCurrentUser(data.body)))
         .catch((err) => console.log(err));
 
+        
     },[accessToken]);
 
     return (
         <div className="dash-board">
             <div className="dash-board-body">
                 <SideBar />
+                <div className='body'>
                 {
                     currentUser ?
                     (<Header user={currentUser}/>)
                     :
                     null
                 }
-                <div className='body'>
                     <Routes>
-                        <Route path="/*" element={<HomePage />}/>
-                        <Route path="/discover/*" element={<DiscoverPage />} />
-                        <Route path="/search" element={<SearchPage/>} />
+                        <Route exact index path="/*" element={<HomePage />}/>
+                        <Route path="discover/*" element={<DiscoverPage />} />
+                        <Route path="search" element={<SearchPage/>} />
                     </Routes>
                 </div>
             </div>

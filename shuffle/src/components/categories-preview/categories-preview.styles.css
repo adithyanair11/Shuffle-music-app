@@ -1,5 +1,5 @@
 .category{
-    margin:1em 0;
+    margin:2em 0;
     width: 100%;
     height: 190px;
     display: flex;
@@ -7,7 +7,7 @@
 }
 .category-container{
     width: max-content;
-    height: 160px;
+    height: 180px;
     display: flex;
     gap: 0 0.5em ;
     margin-bottom: 1em;
@@ -22,6 +22,22 @@
 }
 
 .arrow{
-    font-size: 5px;
+    font-size: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .category{
+        margin: 0.5em 0;
+    }
+    .arrows{
+        display: none;
+    }
+    .category-container{
+        overflow-x: scroll;
+        margin-bottom: 0;
+    }
+    .category-container::-webkit-scrollbar{
+        display: none;
+    }
 }
