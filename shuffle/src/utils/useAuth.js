@@ -7,7 +7,7 @@ export const useAuth = (code) => {
 
     useEffect(() => {
         if(!code) return 
-        axios.post('http://localhost:3001/login',{
+        axios.post('https://shuffle-music-app.herokuapp.com/login',{
             code,
         })
         .then((res) => {
@@ -23,7 +23,7 @@ export const useAuth = (code) => {
 
     useEffect(() => {
         if(!refreshToken || !expiresIn) return 
-        axios.post('http://localhost:3001/refresh',{
+        axios.post('https://shuffle-music-app.herokuapp.com/refresh',{
             refreshToken,
         })
         .then((res) => {

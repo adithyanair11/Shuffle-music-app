@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const SpotifyWebApi = require('spotify-web-api-node');
-
+require('dotenv').config();
 const app = express();
 
 app.use(cors());
@@ -54,4 +54,4 @@ app.post('/login', (req,res) => {
     });
 })
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
