@@ -16,6 +16,7 @@ export const SideBar = () => {
     const dispatch = useDispatch();
     const token = useSelector(selectAccessToken);
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
         spotifyApi.getUserPlaylists()
         .then((res) => dispatch(setUserPlaylists(res.body.items)))

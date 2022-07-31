@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useAuth } from "./utils/useAuth"
 import {useDispatch,useSelector} from 'react-redux';
 import {setCurrentUser,setUserAccessToken} from './store/user/user.action';
-import {selectAccessToken,selectCurrentUser} from './store/user/user.selector';
+import {selectCurrentUser} from './store/user/user.selector';
 import SpotifyWebApi from 'spotify-web-api-node';
 import {Route,Routes} from 'react-router-dom';
 import { SideBar } from "./components/sidebar/sidebar.component";
@@ -17,16 +17,13 @@ const spotifyApi = new SpotifyWebApi({
 }); 
 export const DashBoard = ({code}) => {
     const accessToken = useAuth(code);
-    const token = useSelector(selectAccessToken);
     const dispatch = useDispatch();
     const currentUser = useSelector(selectCurrentUser);
     
     useEffect(() => {
         if(!accessToken) return
-
-        spotifyApi.setAccessToken(token);
-
         dispatch(setUserAccessToken(accessToken));
+        spotifyApi.setAccessToken(accessToken);
         spotifyApi.getMe()
         .then(data => dispatch(setCurrentUser(data.body)))
         .catch((err) => console.log(err));

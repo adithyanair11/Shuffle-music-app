@@ -4,7 +4,6 @@ export const useAuth = (code) => {
     const [accessToken,setAccessToken] = useState();
     const [refreshToken,setRefreshToken]= useState();
     const [expiresIn,setExpiresIn] = useState();
-
     useEffect(() => {
         if(!code) return 
         axios.post('https://shuffle-music-app.herokuapp.com/login',{
@@ -22,8 +21,8 @@ export const useAuth = (code) => {
     },[code])
 
     useEffect(() => {
-        if(!refreshToken || !expiresIn) return 
-        axios.post('https://shuffle-music-app.herokuapp.com/refresh',{
+        if(!refreshToken || !expiresIn) return
+            axios.post('https://shuffle-music-app.herokuapp.com/refresh',{
             refreshToken,
         })
         .then((res) => {
@@ -33,7 +32,6 @@ export const useAuth = (code) => {
         .catch(() => {
             window.location = '/'
         })
-
     },[refreshToken,expiresIn]);
 
 

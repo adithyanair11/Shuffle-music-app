@@ -8,7 +8,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-
 app.post('/refresh', (req,res) => {
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({
@@ -20,6 +19,7 @@ app.post('/refresh', (req,res) => {
 
     spotifyApi.refreshAccessToken()
     .then(data => {
+        console.log(data.body);
         res.json({
             accessToken: data.body.access_token,
             expiresIn: data.body.expires_in

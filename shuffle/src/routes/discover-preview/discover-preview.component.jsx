@@ -18,6 +18,7 @@ export const DiscoverPreview = () => {
     const [featuredPlaylists,getFeaturedPlaylists] = useState([]);
 
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
 
         spotifyApi.getMySavedAlbums()

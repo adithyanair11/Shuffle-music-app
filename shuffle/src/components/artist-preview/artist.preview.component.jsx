@@ -19,6 +19,7 @@ export const ArtistPreview = () => {
     const [albums,setAlbums] = useState([]);
     const [artistTracks,setArtistTracks] = useState([]);
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
 
         spotifyApi.getArtist(id)

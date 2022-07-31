@@ -18,6 +18,7 @@ export const AlbumPage = () => {
     const [image,setImage] = useState('');
 
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
 
         spotifyApi.getAlbum(id)

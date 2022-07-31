@@ -11,6 +11,7 @@ export const Footer = () => {
 
 
     useEffect(() => {
+        if(!token) return;
         setPlay(true)
     },[track.uri,token])
     return(

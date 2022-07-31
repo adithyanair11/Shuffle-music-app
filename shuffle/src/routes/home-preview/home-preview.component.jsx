@@ -15,6 +15,7 @@ export const HomePreview = () => {
     const token = useSelector(selectAccessToken);
 
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
         
         spotifyApi.getMyTopArtists()

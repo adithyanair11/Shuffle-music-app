@@ -16,6 +16,7 @@ export const PlayListPage = () => {
     const {id} = useParams();
 
     useEffect(() => {
+        if(!token) return;
         spotifyApi.setAccessToken(token);
 
         spotifyApi.getPlaylist(id)

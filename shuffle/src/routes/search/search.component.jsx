@@ -14,6 +14,7 @@ export const SearchPage = () => {
     const [searchResults,setSearchResults] = useState([]);
 
     useEffect(() => {
+        if(!token) return;
         if(!searchField){
             setSearchResults([]);
         }
