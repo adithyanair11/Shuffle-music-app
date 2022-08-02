@@ -63,7 +63,7 @@ app.get('/callback', (req,res) => {
                 expires_in
             })
             res.redirect(`${FRONTEND_URI}?${queryParams}`)
-            res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`)
+            // res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`)
         }else{
             res.redirect(`/?${querystring.stringify({error: 'invalid_token'})}`)
         }
