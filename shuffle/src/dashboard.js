@@ -1,6 +1,6 @@
 import './dashboard.css'
 import { useEffect } from "react";
-import { useAuth } from "./utils/useAuth"
+// import { useAuth } from "./utils/useAuth";
 import {useDispatch,useSelector} from 'react-redux';
 import {setCurrentUser,setUserAccessToken} from './store/user/user.action';
 import {selectCurrentUser} from './store/user/user.selector';
@@ -15,8 +15,7 @@ import { SearchPage } from './routes/search/search.component';
 const spotifyApi = new SpotifyWebApi({
     clientId: '3af44969d17340bb8bcd37790457c1f4'
 }); 
-export const DashBoard = ({code}) => {
-    const accessToken = useAuth(code);
+export const DashBoard = ({accessToken}) => {
     const dispatch = useDispatch();
     const currentUser = useSelector(selectCurrentUser);
     

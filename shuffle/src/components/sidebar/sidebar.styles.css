@@ -42,6 +42,17 @@
     margin: 5px auto 10px auto;
 }
 
+.log-out{
+    color: #108954;
+    font-weight: bold;
+    height: 50px;
+    cursor: pointer;
+    transition: 200ms color ease-in;
+    margin-left: 1em;
+}
+.log-out:hover{
+    color: #fff;
+}
 
 @media (max-width:768px){
     .sidebar{
@@ -49,9 +60,14 @@
         height: 90px;
         align-items: center;
     }
+    .log-out{
+        font-size: 14px;
+        margin-top:25px;
+    }
     .side-bar-options-main{
         display: flex;
-        margin-left: 3em;
+        align-items: center;
+        margin-left: 1em;
     }
     .sidebar-logo-container{
         margin-left: 0.6em;

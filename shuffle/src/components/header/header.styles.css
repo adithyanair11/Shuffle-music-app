@@ -19,8 +19,6 @@
 
 @media (max-width:768px){
     .avatar{
-        height: 30px;
-        width: 30px;
-        top: 10px;
+        display: none;
     }
 }

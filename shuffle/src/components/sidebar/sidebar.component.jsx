@@ -1,4 +1,5 @@
 import './sidebar.styles.css';
+import { logout } from '../../utils/spotify';
 import { SideBarOption } from '../sidebar-option/sidebar-option.component';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
@@ -33,6 +34,7 @@ export const SideBar = () => {
             <SideBarOption link="search" name="Search" Icon={SearchIcon}/>
             <SideBarOption link="/" name="Home" Icon={HomeIcon}/>
             <SideBarOption link="discover" name="Discover" Icon={LibraryMusicIcon}/>
+            <h4 onClick={logout} className="log-out">LOG OUT </h4>
            </div>
         </div>
     )

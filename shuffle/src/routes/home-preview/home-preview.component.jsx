@@ -13,7 +13,6 @@ export const HomePreview = () => {
     const [topArtists,setTopArtists] = useState([]);
     const [topTracks,setTopTracks] = useState([]);
     const token = useSelector(selectAccessToken);
-
     useEffect(() => {
         if(!token) return;
         spotifyApi.setAccessToken(token);
