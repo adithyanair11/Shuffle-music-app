@@ -11,10 +11,9 @@
     "shuffle/node_modules"
   ],
   "scripts": {
-    "devStart": "nodemon server.js",
     "start": "node server.js",
     "build": "NODE_ENV=production cd shuffle/ && npm install && npm run build",
-    "start-server": "nodemon server.js"
+    "start-server": "node server.js"
   },
   "keywords": [],
   "author": "",
