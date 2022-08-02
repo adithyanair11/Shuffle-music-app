@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "start": "node server.js",
+    "server": "nodemon server.js",
     "build": "NODE_ENV=production cd shuffle/ && npm install && npm run build",
     "start-server": "node server.js"
   },
