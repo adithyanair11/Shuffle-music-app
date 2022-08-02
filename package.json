@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-
+  "engines": {
+    "node": "16.16.0"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "shuffle/node_modules"
+  ],
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "NODE_ENV=production cd shuffle/ && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
