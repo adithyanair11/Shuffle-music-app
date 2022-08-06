@@ -7,7 +7,7 @@ export const CategoriesPreview = ({array,categoryTitle,type}) => {
     const itemRef = useRef()
     const [slideNumber,setSlideNumber] = useState(0);
     const handleClick = (direction) => {
-        let distance = itemRef.current.getBoundingClientRect().x - 260;
+        let distance = itemRef.current.getBoundingClientRect().x - 290;
         if(direction === 'left' && slideNumber >= 1){
             setSlideNumber(slideNumber-1);
             itemRef.current.style.

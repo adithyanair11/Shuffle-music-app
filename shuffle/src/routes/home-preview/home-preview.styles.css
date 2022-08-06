@@ -1,9 +1,12 @@
 .home{
     height: 100%;
     width: 100%;
+    overflow-y: overlay;
 }
 
-
+.home::-webkit-scrollbar{
+    display: none;
+}
 .songs{
     margin-top:3em;
 }

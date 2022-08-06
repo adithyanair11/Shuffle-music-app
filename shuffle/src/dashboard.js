@@ -1,6 +1,5 @@
 import './dashboard.css'
 import { useEffect } from "react";
-// import { useAuth } from "./utils/useAuth";
 import {useDispatch,useSelector} from 'react-redux';
 import {setCurrentUser,setUserAccessToken} from './store/user/user.action';
 import {selectCurrentUser} from './store/user/user.selector';

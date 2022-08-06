@@ -5,12 +5,14 @@
     display: flex;
     flex-direction: column;
 }
+
 .category-container{
     width: max-content;
     height: 180px;
     display: flex;
     gap: 0 0.5em ;
     margin-bottom: 1em;
+    transform: translateX(0);
     transition: all 1s ease;
 }
 
@@ -30,7 +32,7 @@
     .category{
         margin: 0.5em 0;
     }
-    .arrows{
+    .arrow{
         display: none;
     }
     .category-container{
