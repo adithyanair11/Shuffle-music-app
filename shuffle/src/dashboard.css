@@ -9,10 +9,13 @@
 
 .dash-board-body{
     display: flex;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .body{
     height: 100vh;
+    width: 100%;
     flex: 0.8;
     background-color: #d81e5b;
     background-image: linear-gradient(#d81e5b, rgba(0,0,0,1));
