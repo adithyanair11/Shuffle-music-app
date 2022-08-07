@@ -1,4 +1,24 @@
-# shuffle-music-app
+# shuffle-music-app.
+##Local installation and setup.
+1) Register a spotify app your [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) and add `http://localhost:8888/callback` as the Redirect URI in the app settings.
+
+2) Create a `.env` file at the root of the project and add your unique `CLIENT_ID` and `CLIENT_SECRET` from the Spotify dashboard.
+
+3) Install dependencies
+ ```shell
+ npm install
+ ```
+4) Run the React app on <http://localhost:3000>
+
+ ```shell
+ npm start
+ ```
+5) Run the Node server on <http://localhost:8888>
+
+```shell
+nodemon server.js
+```
+
 ## IMPORTANT NOTES
 The following application uses the spotify web api and therefore will have access to the user's spotify data such as previously created playlists, liked albums, followed artists, top tracks and song search.
 
