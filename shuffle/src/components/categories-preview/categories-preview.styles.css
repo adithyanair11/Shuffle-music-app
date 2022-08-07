@@ -23,6 +23,7 @@
     justify-content: space-between;
 }
 
+
 .arrow{
     font-size: 30px;
     cursor: pointer;
@@ -32,8 +33,11 @@
     .category{
         margin: 0.5em 0;
     }
+    .category-header h1{
+        font-size: 1rem;
+    }
     .arrow{
-        display: none;
+        font-size: 20px !important;
     }
     .category-container{
         overflow-x: scroll;

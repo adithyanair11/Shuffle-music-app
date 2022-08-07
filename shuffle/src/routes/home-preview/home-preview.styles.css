@@ -10,3 +10,9 @@
 .songs{
     margin-top:3em;
 }
+
+@media (max-width:768px){
+    .songs-container h1{
+        font-size: 1rem;
+    }
+}

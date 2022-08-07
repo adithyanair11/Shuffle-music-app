@@ -3,15 +3,19 @@ import { Card } from '../card/card.component';
 import { useRef,useState } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useScreenSize } from '../../utils/screensize';
 export const CategoriesPreview = ({array,categoryTitle,type}) => {
     const itemRef = useRef()
+    const size = useScreenSize();
     const [slideNumber,setSlideNumber] = useState(0);
     const handleClick = (direction) => {
         let distance = itemRef.current.getBoundingClientRect().x - 290;
+        if(size < 768){
+            distance = itemRef.current.getBoundingClientRect().x - 30;
+        }
         if(direction === 'left' && slideNumber >= 1){
             setSlideNumber(slideNumber-1);
-            itemRef.current.style.
-            transform = `translateX(${168 + distance}px)`;
+            itemRef.current.style.transform = `translateX(${168 + distance}px)`;
         }
         if(direction === 'right' && slideNumber < Math.floor(array.length/2)){
             setSlideNumber(slideNumber+1)
