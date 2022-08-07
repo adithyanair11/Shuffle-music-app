@@ -15,12 +15,12 @@ REDIRECT_URI: 'http://localhost:8888/callback'
  ```shell
  npm install
  ```
-4) Run the React app on <http://localhost:3000>
+4) Run the React app on <http://localhost:3000> in the `shuffle` folder i.e the client folder.
 
  ```shell
  npm start
  ```
-5) Run the Node server on <http://localhost:8888>
+5) Run the Node server on <http://localhost:8888> in the root folder.
 
 ```shell
 nodemon server.js
