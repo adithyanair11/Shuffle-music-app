@@ -4,6 +4,13 @@
 
 2) Create a `.env` file at the root of the project and add your unique `CLIENT_ID` and `CLIENT_SECRET` from the Spotify dashboard and set `FRONTEND_URI` to `http://localhost:3000` and `REDIRECT_URI` to `http://localhost:8888/callback`.
 
+```shell
+CLIENT_ID: XXXXX
+CLIENT_SECRET: XXXXX
+FRONTEND_URI: 'http://localhost:3000'
+REDIRECT_URI: 'http://localhost:8888/callback'
+```
+
 3) Install dependencies
  ```shell
  npm install
