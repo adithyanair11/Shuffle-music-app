@@ -1,5 +1,5 @@
 # shuffle-music-app
-To view the final build of your own application, please follow the local installation and setup.
+To view the final build of the application, please follow the local installation and setup.
 
 ## Local installation and setup
 1) Register a spotify app on your [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/) and add `http://localhost:8888/callback` as the Redirect URI in the app settings.
