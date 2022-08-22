@@ -1,7 +1,7 @@
 # shuffle-music-app
 To view the final build of the application, please follow the local installation and setup.
 
-# Video demonstrarion
+# Video demonstration
 
 click the link to view demo [live demo](https://drive.google.com/file/d/1Dck89OZNsT1bLieWosNniNadJnUpYZp2/view?usp=sharing).
 
